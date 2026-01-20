@@ -3,9 +3,6 @@
 import { useState } from 'react';
 import { X, Menu, Phone, Clock, Youtube, Facebook, Instagram, Stethoscope } from 'lucide-react';
 
-import CheckedBox from '../../../assets/svg/checked-box.svg';
-import UnCheckedBox from '../../../assets/svg/un-checkbox.svg';
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -98,8 +95,6 @@ const Header = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <CheckedBox className="size-[2rem] text-[var(--text-7)]" />
-            <UnCheckedBox />
             <Facebook className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
             <Youtube className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
             <Instagram className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
