@@ -1,0 +1,179 @@
+$day-size: 3.6rem;
+.date-picker-panel {
+  .rdrCalendarWrapper {
+    background-color: var(--bg-47);
+    color: var(--text-21) !important;
+    width: 45.6rem;
+
+    .rdrMonth {
+      width: 100%;
+      .rdrDayDisabled {
+        background-color: transparent;
+        .rdrDayNumber {
+          span {
+            color: var(--text-50);
+            font-weight: 400;
+          }
+        }
+      }
+      .rdrDays {
+        row-gap: 0.8rem;
+      }
+      .rdrDay {
+        height: $day-size;
+        line-height: $day-size;
+        &.rdrDayHovered {
+          border-color: transparent;
+          border: none;
+          .rdrDayNumber {
+            border: none;
+            border-color: transparent;
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+      .rdrDayNumber {
+        span {
+          color: var(--text-37);
+        }
+      }
+
+      .rdrDayPassive {
+        span {
+          @apply text-subtitle-night;
+        }
+        .rdrDayNumber {
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+
+      .rdrDayNumber {
+        span {
+          color: var(--white-night);
+          font-weight: 500;
+
+          &::after {
+            @apply light:bg-[var(--white-night)];
+          }
+        }
+      }
+
+      .rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
+        color: var(--white-night);
+      }
+      .rdrSelected,
+      .rdrDayStartPreview,
+      .rdrDayEndPreview {
+        width: $day-size; 
+        height: $day-size;
+        border-radius: 50%;
+
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        .rdrStartEdge::after {
+          @apply dark:bg-[#55381d] light:bg-[#C7E0FE];
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          inset: 0;
+          padding: 0.1rem;
+          @apply dark:bg-gradient-to-r dark:from-[#fa9528] dark:to-[#f76f08] light:bg-[--gradient-1];
+
+          mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+          mask-composite: exclude;
+          z-index: 1;
+        }
+      }
+      .rdrStartEdge,
+      .rdrEndEdge {
+        width: $day-size;
+        height: $day-size;
+        border-radius: 50%;
+        // border: 1px solid var(--brand-night);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          inset: 0;
+          padding: 0.1rem;
+          @apply dark:bg-gradient-to-r dark:from-[#fa9528] dark:to-[#f76f08] light:bg-[--gradient-1];
+
+          mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+          mask-composite: exclude;
+          z-index: 1;
+        }
+      }
+      .rdrStartEdge::after {
+        content: '';
+        height: 2.8rem;
+        @apply dark:bg-[#55381d] light:bg-[#C7E0FE];
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 50%;
+        width: 4.3rem;
+        z-index: 0;
+      }
+      .rdrEndEdge::after {
+        content: '';
+        height: 2.8rem;
+        @apply dark:bg-[#55381d] light:bg-[#C7E0FE];
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50%;
+        width: 4.3rem;
+        z-index: -1;
+      }
+      .rdrInRange {
+        height: 2.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .rdrMonthName {
+        color: var(--text-22);
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 500;
+        padding-bottom: 1.6rem;
+        padding-left: 2rem;
+      }
+    }
+    .rdrWeekDays {
+      @apply border-b border-night;
+    }
+    .rdrMonthAndYearWrapper {
+      display: none;
+    }
+  }
+}

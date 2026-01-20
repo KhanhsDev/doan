@@ -1,0 +1,13 @@
+<svg width="140" height="75" viewBox="0 0 140 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.75">
+    <rect width="140" height="75" rx="8" fill="#191919"/>
+    <path opacity="0.25" d="M20.6443 9.32812C24.4983 9.32812 27.699 12.7645 27.699 17.1006C27.6988 21.4365 24.4982 24.8721 20.6443 24.8721C16.7905 24.8719 13.5908 21.4364 13.5906 17.1006C13.5906 12.7646 16.7904 9.32827 20.6443 9.32812Z" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="8.55786" y="31.3789" width="24.1799" height="34.2941" rx="1.5" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="45.8218" y="9.32812" width="77.5611" height="5.61765" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="53.8843" y="18.1562" width="61.446" height="2.30882" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="41.7959" y="31.3789" width="67.4891" height="4.5147" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="41.7959" y="41.3125" width="60.4389" height="4.5147" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="41.7959" y="51.2383" width="89.6475" height="4.5147" fill="currentColor" stroke="currentColor"/>
+    <rect opacity="0.25" x="41.7959" y="61.1641" width="82.5971" height="4.5147" fill="currentColor" stroke="currentColor"/>
+  </g>
+</svg>

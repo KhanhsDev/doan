@@ -1,0 +1,13 @@
+{
+  "common": {
+    "hello": "Hello",
+    "welcome": "Welcome to our application",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  }
+}

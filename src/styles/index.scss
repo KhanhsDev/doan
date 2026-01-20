@@ -1,0 +1,103 @@
+@import './theme.scss';
+@import './light-theme.scss';
+@import './dark-theme.scss';
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: var(--gray-2);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color-1);
+}
+body {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1900px) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  .dark-variable & {
+    scrollbar-color: #222222 transparent;
+  }
+  .light-variable & {
+    scrollbar-color: #e0e0e0 transparent;
+  }
+  scrollbar-width: thin;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-auto-fill);
+  -webkit-box-shadow: 0 0 0px 1000px #050214 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#base-tooltip {
+  z-index: 10;
+}
+
+.marquee .marquee-one {
+  $speed: 45s;
+  animation: marquee $speed linear infinite;
+  @apply relative;
+}
+
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+    transform: translateX(0);
+  }
+
+  100% {
+    left: 0;
+    transform: translateX(calc(-100%));
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1281px) {
+  html {
+    font-size: 50%;
+  }
+}

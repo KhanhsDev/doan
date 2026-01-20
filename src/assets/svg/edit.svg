@@ -1,0 +1,16 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path className="theme" d="M11.1667 3.6665H9.50008C5.33341 3.6665 3.66675 5.33317 3.66675 9.49984V14.4998C3.66675 18.6665 5.33341 20.3332 9.50008 20.3332H14.5001C18.6667 20.3332 20.3334 18.6665 20.3334 14.4998V12.8332"
+                                                                                                                          stroke="currentColor"
+                                                                                                                          stroke-width="1.5"
+                                                                                                                          stroke-linecap="round"
+                                                                                                                          stroke-linejoin="round" />
+  <path d="M15.3668 4.51663L8.80014 11.0833C8.55014 11.3333 8.30014 11.825 8.25014 12.1833L7.89181 14.6916C7.75848 15.6 8.40014 16.2333 9.30848 16.1083L11.8168 15.75C12.1668 15.7 12.6585 15.45 12.9168 15.2L19.4835 8.6333C20.6168 7.49997 21.1501 6.1833 19.4835 4.51663C17.8168 2.84997 16.5001 3.3833 15.3668 4.51663Z"
+                                                                                                                          stroke="currentColor"
+                                                                                                                          stroke-width="1.5"
+                                                                                                                          stroke-miterlimit="10"
+                                                                                                                          stroke-linecap="round"
+                                                                                                                          stroke-linejoin="round" />
+  <path d="M14.425 5.45825C14.9834 7.44992 16.5417 9.00825 18.5417 9.57492" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                                                                                                                          stroke-linecap="round"
+                                                                                                                          stroke-linejoin="round" />
+</svg>

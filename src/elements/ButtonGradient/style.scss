@@ -1,0 +1,190 @@
+.button-gradient-outline {
+  box-shadow: var(--shadow-light);
+
+  &.is-disabled {
+    @apply text-[--text-2];
+    background-color: var(--bg-disabled) !important;
+
+    span {
+      @apply text-[--text-2];
+    }
+
+    button {
+      color: var(--text-2) !important;
+      border-color: var(--border-9) !important;
+      background-color: var(--bg-disabled) !important;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -0.1rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--border-night-1);
+  }
+
+  &.is-active {
+    &:not(.is-disabled) {
+      & {
+        position: relative;
+        border-color: var(--primary-2) !important;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -0.1rem;
+        border-radius: 0.8rem;
+        // background: var(--text-8);
+        // border-color: #f76f08;
+        padding: 0.1rem;
+      }
+      border: 0.1rem solid var(--border-new-item);
+
+      span {
+        @apply text-gradient-1;
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        @apply px-[1.6rem];
+      }
+    }
+  }
+
+  &:not(.is-active) {
+    @apply bg-[--bg-0] text-[--text-2];
+
+    span {
+      @apply text-[--text-2];
+    }
+
+    button {
+      @apply px-[1.6rem] py-[0.8rem] bg-[--bg-21] cursor-pointer text-[1.6rem] border border-[--border-9] leading-[2rem] font-[500] text-[--text-disabled] relative rounded-[0.7rem];
+    }
+  }
+}
+// cái này chỉ áp dụng cho light ( dùng cho button nào có variant filled ) , tức là có nền màu và style khác với button outline
+.light-variable {
+  .button-gradient-filled {
+    &.is-disabled {
+      background-color: #e6e6e6 !important;
+      border: 0.1rem solid #ffffff !important;
+
+      &::before {
+        display: none !important;
+      }
+
+      span {
+        color: #0a2762 !important;
+      }
+      button {
+        color: #0a2762 !important;
+        border-color: #ffffff !important;
+        background-color: #e6e6e6 !important;
+      }
+    }
+
+    &.is-active:not(.is-disabled) {
+      position: relative;
+      background-color: #0a2762;
+      border: 0.1rem solid #0a2762;
+      span {
+        color: #ffffff;
+      }
+      button {
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        background-color: #0a2762;
+        @apply px-[1.6rem];
+      }
+    }
+
+    &:not(.is-active):not(.is-disabled) {
+      background-color: #ffffff !important;
+      border: none;
+
+      span {
+        color: #0a2762 !important;
+      }
+      button {
+        background-color: #ffffff !important;
+        color: #0a2762 !important;
+        border-color: #0a2762 !important;
+        @apply px-[1.6rem] py-[0.8rem] cursor-pointer text-[1.6rem] leading-[2rem] font-[500] relative rounded-[0.7rem];
+      }
+    }
+  }
+}
+// cái này chỉ áp dụng cho dark ( dùng như cũ )
+.dark-variable {
+  .button-gradient-filled {
+    box-shadow: var(--shadow-light);
+
+    &.is-disabled {
+      @apply text-[--text-2];
+      background-color: var(--bg-disabled) !important;
+
+      span {
+        @apply text-[--text-2];
+      }
+
+      button {
+        color: var(--text-2) !important;
+        border-color: var(--border-9) !important;
+        background-color: var(--bg-disabled) !important;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -0.1rem;
+      border-radius: 0.8rem;
+      border: 0.1rem solid var(--border-night-1);
+    }
+
+    &.is-active {
+      &:not(.is-disabled) {
+        & {
+          position: relative;
+          border-color: var(--primary-2) !important;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          inset: -0.1rem;
+          border-radius: 0.8rem;
+          // background: var(--text-8);
+          // border-color: #f76f08;
+          padding: 0.1rem;
+        }
+        border: 0.1rem solid var(--border-new-item);
+
+        span {
+          @apply text-gradient-1;
+        }
+
+        button {
+          width: 100%;
+          height: 100%;
+          @apply px-[1.6rem];
+        }
+      }
+    }
+
+    &:not(.is-active) {
+      @apply bg-[--bg-0] text-[--text-2];
+
+      span {
+        @apply text-[--text-2];
+      }
+
+      button {
+        @apply px-[1.6rem] py-[0.8rem] bg-[--bg-21] cursor-pointer text-[1.6rem] border border-[--border-9] leading-[2rem] font-[500] text-[--text-disabled] relative rounded-[0.7rem];
+      }
+    }
+  }
+}

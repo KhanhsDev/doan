@@ -1,0 +1,204 @@
+.symbol-picker {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  height: 100%;
+  border-radius: 0.8rem;
+  &.theme-1 {
+    > .Select {
+      > .Select-control {
+        background: var(--bg-7) !important;
+        height: 3.4rem;
+        border-radius: 0.8rem;
+        > .Select-multi-value-wrapper {
+          height: 3.4rem;
+          > .Select-placeholder {
+            color: var(--text-color-1);
+            font-size: 1.4rem;
+            font-weight: 500;
+          }
+          > .Select-input {
+            input {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    .search-icon {
+      color: var(--text-color-1);
+      margin-left: 8px;
+    }
+  }
+
+  &.clearable {
+    .clear-icon {
+      color: var(--light-gray);
+      cursor: pointer;
+      position: absolute;
+      top: calc(50%);
+      transform: translateY(-50%);
+      right: 20px;
+      z-index: 3;
+    }
+  }
+
+  &.symbol-picker-right {
+    > div.Select {
+      > .Select-menu-outer {
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+
+  &.symbol-picker-top {
+    > div.Select {
+      > .Select-menu-outer {
+        bottom: 36px;
+        top: unset;
+        .Select-noresults {
+          position: unset !important;
+        }
+      }
+    }
+    .VirtualSelectGrid {
+      position: unset !important;
+    }
+  }
+
+  > div.Select {
+    flex: 1;
+    z-index: 3;
+
+    > .Select-control {
+      height: 100%;
+      background-color: var(--bg) !important;
+      border: none !important;
+      border-radius: 4px;
+
+      > .Select-multi-value-wrapper {
+        > .Select-placeholder {
+          line-height: inherit;
+          align-items: center;
+          display: flex;
+        }
+      }
+    }
+    > .Select-menu-outer {
+      position: absolute;
+      width: 350px;
+      border: none;
+      margin-top: 5px;
+      background-color: var(--bg);
+      color: var(--text-color-1);
+      z-index: 10;
+      .symbol-row {
+        height: 100%;
+        width: 296px;
+        display: flex;
+        color: var(--text-color-1);
+        background-color: var(--bg);
+        justify-content: center;
+        padding: 0px 5px 0px 10px;
+        align-items: center;
+        border: 1px solid var(--separator-2);
+        border-bottom: none;
+
+        &.highlight {
+          background-color: var(--gray-2);
+        }
+
+        > .code {
+          flex: 1;
+          color: var(--primary-1);
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        > .market-text {
+          flex: 1;
+        }
+
+        > .company-name {
+          flex: 3;
+        }
+
+        > .line-camp {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &:hover {
+          background-color: var(--hover-tab);
+          cursor: pointer;
+        }
+      }
+      > .Select-menu {
+        border-top: 1px solid var(--separator);
+        .Select-noresults {
+          width: 350px !important;
+          position: fixed;
+          border: 0 1px 1px 1px solid var(--separator);
+          background-color: var(--bg-module);
+        }
+      }
+    }
+  }
+
+  .VirtualSelectGrid {
+    position: fixed !important;
+    border-radius: 3px;
+    background-color: var(--bg);
+    border-top-color: var(--separator);
+    box-shadow: 0 1px 0 var(--black);
+  }
+
+  &.placeholder .Select-placeholder {
+    > * {
+      display: none;
+    }
+  }
+
+  svg.search-icon {
+    position: absolute;
+    top: calc(50%);
+    transform: translateY(-50%);
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+    z-index: 3;
+    left: 0;
+  }
+}
+
+.Select-multi-value-wrapper {
+  height: 100%;
+  .Select-placeholder {
+    padding-left: 45px;
+  }
+  > .Select-input {
+    height: 100%;
+    width: 100%;
+    > input {
+      width: 100% !important;
+      color: var(--text-color-1);
+      text-transform: uppercase;
+      line-height: 1.2rem;
+      padding: 0;
+      padding-left: 35px;
+      height: 100%;
+      z-index: 3;
+      left: 20px;
+    }
+  }
+}
+
+.Select-arrow-zone {
+  display: none;
+  > .Select-arrow {
+    display: none;
+  }
+}
