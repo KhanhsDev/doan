@@ -6,10 +6,9 @@ import React, { useRef, useMemo, Fragment, useState, useEffect } from 'react';
 import { Listbox, Transition, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
 
 import clsx from 'clsx';
-import InfoIcon from 'assets/svg/info-icon.svg';
-
-import ChevronDown from 'assets/svg/caret_down.svg';
-import SearchIcon from 'assets/svg/search-icon.svg';
+import InfoIcon from '@/assets/svg/info-icon.svg';
+import ChevronDown from '@/assets/svg/caret_down.svg';
+import SearchIcon from '@/assets/svg/search-icon.svg';
 
 import TextInput from '../TextInput';
 

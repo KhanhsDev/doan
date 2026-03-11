@@ -33,7 +33,7 @@ const Doctors = () => {
   ];
   return (
     <section id="doctors" className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[100rem] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Đội ngũ bác sĩ</h2>
           <p className="text-xl text-gray-600">Bác sĩ giàu kinh nghiệm, tận tâm với nghề</p>
@@ -43,7 +43,7 @@ const Doctors = () => {
           {doctors.map((doctor, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group cursor-pointer"
             >
               <div className="relative h-64 overflow-hidden">
                 <img

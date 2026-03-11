@@ -5,11 +5,10 @@ import './style.scss';
 import React, { useRef, useState, useEffect } from 'react';
 
 import clsx from 'clsx';
-import Eye from 'assets/svg/eye.svg';
-import XIcon from 'assets/svg/x.svg';
-import EyeOff from 'assets/svg/eye-off.svg';
-
-import PasswordIcon from 'assets/svg/password-icon.svg';
+import Eye from '@/assets/svg/eye.svg';
+import XIcon from '@/assets/svg/x.svg';
+import EyeOff from '@/assets/svg/eye-off.svg';
+import PasswordIcon from '@/assets/svg/password-icon.svg';
 
 interface PasswordInputProps extends React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
   label?: string;

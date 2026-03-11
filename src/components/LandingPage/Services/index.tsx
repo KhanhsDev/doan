@@ -21,7 +21,7 @@ const Services = () => {
   ];
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[100rem] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Dịch vụ nổi bật</h2>
           <p className="text-xl text-blue-100">Gói khám sức khỏe toàn diện với giá ưu đãi</p>
