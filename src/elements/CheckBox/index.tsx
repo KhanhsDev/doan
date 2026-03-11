@@ -3,7 +3,7 @@ import './style.scss';
 import React from 'react';
 
 import clsx from 'clsx';
-import Checked from 'assets/svg/check.svg';
+import Checked from '@/assets/svg/check.svg';
 
 import type { ReactNode } from 'react';
 

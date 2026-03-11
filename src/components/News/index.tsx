@@ -20,7 +20,7 @@ const News = () => {
   ];
   return (
     <section id="news" className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[100rem] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Tin tức y tế</h2>
           <p className="text-xl text-gray-600">Cập nhật kiến thức sức khỏe mới nhất</p>

@@ -1,7 +1,12 @@
 import { ChevronRight } from 'lucide-react';
+import { useKeenSlider } from 'keen-slider/react';
+
+import { useModal } from '@/hooks/common';
 
 import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react';
+
+import BookNow from '@/components/BookNow';
+import ModalProvider from '@/components/ModalProvider';
 
 const Banner = () => {
   // Banner slides
@@ -61,7 +66,10 @@ const Banner = () => {
       },
     ],
   );
-
+  const modalBookNow = useModal();
+  const handleBookNow = () => {
+    modalBookNow.handleShow();
+  };
   return (
     <section className="h-fit">
       <div ref={sliderRef} className="keen-slider min-h-[60rem]">
@@ -75,11 +83,14 @@ const Banner = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="max-w-7xl mx-auto px-4 h-full flex items-center">
+            <div className="max-w-[100rem] mx-auto px-4 h-full flex items-center">
               <div className="text-white max-w-2xl">
                 <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
                 <p className="text-xl mb-8">{slide.subtitle}</p>
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-blue-50 transition transform hover:scale-105 shadow-xl">
+                <button
+                  className="px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-blue-50 transition transform hover:scale-105 shadow-xl"
+                  onClick={handleBookNow}
+                >
                   Đặt lịch ngay <ChevronRight className="inline w-5 h-5" />
                 </button>
               </div>
@@ -111,6 +122,13 @@ const Banner = () => {
           </div>
         </div>
       </div> */}
+      <ModalProvider
+        show={modalBookNow.show}
+        onClose={modalBookNow.handleHide}
+        dialogClass="!bg-gradient-to-r transition-transform from-blue-500 to-cyan-500"
+      >
+        <BookNow />
+      </ModalProvider>
     </section>
   );
 };

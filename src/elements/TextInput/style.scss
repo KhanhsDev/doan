@@ -1,5 +1,5 @@
 .input-container {
-  &[data-label-placement="inside"] {
+  &[data-label-placement='inside'] {
     .label-inside-animation {
       position: absolute;
       transition: all 0.2s ease;
@@ -39,7 +39,7 @@
         line-height: 2.4rem;
         min-width: 0;
         background-color: transparent !important;
-        caret-color: var(--caret-color);
+        caret-color: #000000;
       }
       textarea {
         margin-top: 2.2rem;

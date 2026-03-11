@@ -6,8 +6,8 @@ import { NumericFormat } from 'react-number-format';
 import React, { useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 
 import clsx from 'clsx';
-import Plus from 'assets/svg/plus.svg';
-import Minus from 'assets/svg/minus.svg';
+import Plus from '@/assets/svg/plus.svg';
+import Minus from '@/assets/svg/minus.svg';
 
 import type { NumberFormatValues, NumericFormatProps } from 'react-number-format';
 

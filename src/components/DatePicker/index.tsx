@@ -1,8 +1,8 @@
 'use client';
 
 import './style.scss';
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 import React from 'react';
 import { Calendar } from 'react-date-range';
 import { Popover, PopoverPanel, PopoverButton } from '@headlessui/react';
@@ -10,17 +10,12 @@ import { Popover, PopoverPanel, PopoverButton } from '@headlessui/react';
 import clsx from 'clsx';
 import { addDays } from 'date-fns';
 import { useParams } from 'next/navigation';
-import { useTranslation } from 'app/i18n/client';
-import CalendarIcon from 'assets/svg/calendar.svg';
+import CalendarIcon from '@/assets/svg/calendar.svg';
 
 import type { FocusEventHandler } from 'react';
 
-import { THEME } from 'global';
-
-import { formatDateToString } from 'utils/datetime';
-import { getCustomLocale } from 'utils/date-picker';
-
-import { useTheme } from 'hooks/useTheme';
+import { getCustomLocale } from '@/utils/date-picker';
+import { formatDateToString } from '@/utils/datetime';
 
 type DatePickerProps = {
   placeholder?: string;
@@ -59,12 +54,10 @@ const DayOption = [
 
 const DatePicker = (props: DatePickerProps) => {
   const { label, hasError, errorMessage, className, btnClassName } = props;
-  const { t } = useTranslation();
 
   const { lng } = useParams();
 
   const customLocale: Locale = getCustomLocale(lng as string);
-  const { theme } = useTheme();
 
   return (
     <Popover className={clsx(className, 'date-picker h-[4.4rem]', 'font-medium', { 'has-error': hasError })}>
@@ -79,7 +72,7 @@ const DatePicker = (props: DatePickerProps) => {
         >
           <PopoverButton className="flex w-full h-full items-center justify-between text-base">
             <div className={clsx(props.labelClassName)}>
-              {`${label ? t(label) : ''} ${props.value ? formatDateToString(props.value, 'dd/MM/yyyy') : (props.placeholder ?? '')}`}
+              {`${label ? label : ''} ${props.value ? formatDateToString(props.value, 'dd/MM/yyyy') : (props.placeholder ?? '')}`}
             </div>
             <div>
               <CalendarIcon className="size-[2rem]" />
@@ -106,7 +99,7 @@ const DatePicker = (props: DatePickerProps) => {
                         )}
                         key={item.value}
                       >
-                        {t(item.label, { days: item.value })}
+                        {`${item.label} ${item.value}`}
                       </button>
                     ))}
                   </div>
@@ -115,7 +108,7 @@ const DatePicker = (props: DatePickerProps) => {
                   className="w-full"
                   scroll={{ enabled: true, monthHeight: 256, longMonthHeight: 295 }}
                   months={1}
-                  color={theme === THEME.LIGHT ? '#C7E0FE' : '#55381D'}
+                  color="#C7E0FE"
                   onChange={date => {
                     props.onChange?.(props.name, date);
                     close();
@@ -144,7 +137,7 @@ const DatePicker = (props: DatePickerProps) => {
                     return false;
                   }}
                   showMonthAndYearPickers={false}
-                  rangeColors={[theme === THEME.LIGHT ? '#C7E0FE' : '#55381D']}
+                  rangeColors={['#C7E0FE']}
                 />
               </div>
             )}

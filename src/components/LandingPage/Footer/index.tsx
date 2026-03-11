@@ -2,7 +2,7 @@ import { Facebook, Instagram, Mail, MapPin, Phone, Clock, Stethoscope, Youtube }
 const Footer = () => {
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[100rem] mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* About */}
           <div>

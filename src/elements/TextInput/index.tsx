@@ -5,9 +5,9 @@ import './style.scss';
 import React, { useRef, useState, useEffect, useImperativeHandle } from 'react';
 
 import clsx from 'clsx';
-import Eye from 'assets/svg/eye.svg';
-import XIcon from 'assets/svg/x-icon.svg';
-import EyeOff from 'assets/svg/eye-off.svg';
+import Eye from '@/assets/svg/eye.svg';
+import XIcon from '@/assets/svg/x-icon.svg';
+import EyeOff from '@/assets/svg/eye-off.svg';
 
 import Preload from '../../components/Preload';
 

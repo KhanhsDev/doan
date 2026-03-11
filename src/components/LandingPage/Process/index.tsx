@@ -3,7 +3,7 @@ import { ChevronRight } from 'lucide-react';
 const Process = () => {
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[100rem] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Quy trình đặt lịch</h2>
           <p className="text-xl text-gray-600">4 bước đơn giản để đặt lịch khám</p>

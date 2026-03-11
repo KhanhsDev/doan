@@ -3,7 +3,7 @@ import { Award, Heart, Users, Stethoscope } from 'lucide-react';
 const About = () => {
   return (
     <div className="py-[4rem] ">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[100rem] mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-[2.4rem] font-700 text-gray-900 mb-[2rem]">Phòng Khám An Khang</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

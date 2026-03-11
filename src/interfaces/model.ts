@@ -16,7 +16,9 @@ export interface Favorite {
   name: string;
   symbolList?: string[];
 }
-
+export type RouteParamLng = {
+  lng: string;
+};
 export interface UpdateFavoriteList {
   favorite: Favorite;
   isDeleteSymbol?: boolean;
