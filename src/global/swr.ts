@@ -1,0 +1,1 @@
+export const COMMON_LOGIN_MODAL = 'COMMON_LOGIN_MODAL';

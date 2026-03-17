@@ -3,7 +3,7 @@
 
   &[data-has-value='true'] {
     .input-place-holder {
-      color: var(--text-4) !important;
+      color: #8e8e93 !important;
     }
   }
   input {
@@ -13,14 +13,14 @@
   }
 
   .input-place-holder {
-    @apply text-[2rem] font-[500] leading-[2.4rem] text-[--text-4] transition-all;
-    color: var(--text-4);
+    @apply text-[2rem] font-[500] leading-[2.4rem] text-[#8e8e93] transition-all;
+    color: #8e8e93 !important;
   }
 
   .label-inside-animation {
     position: absolute;
     transition: all 0.2s ease;
-    color: var(--text-58);
+    color: #686868;
     @apply text-[2rem];
   }
 }
