@@ -101,7 +101,7 @@ const PasswordInput = (props: PasswordInputProps) => {
               // placeholder={placeholder}
               className={clsx(
                 inputElementClassName,
-                'absolute !top-[1.2rem] caret-[var(--text-color-1)] text-transparent w-full z-[1]',
+                'absolute !top-[1.2rem] caret-[#000000] text-transparent w-full z-[1]',
                 {
                   'input-label-inside': labelPlacement === 'inside',
                   '!text-[2rem] !font-500 !leading-[2.4rem]': show,
@@ -127,7 +127,7 @@ const PasswordInput = (props: PasswordInputProps) => {
                 </span>
               ) : (
                 Array.from({ length: (props.value as string).length }).map((_, index) => (
-                  <span key={index} className="text-[var(--text-auto-fill)]">
+                  <span key={index} className="text-[#000000]">
                     <PasswordIcon className="size-[2rem]" />
                   </span>
                 ))
@@ -148,9 +148,9 @@ const PasswordInput = (props: PasswordInputProps) => {
             onClick={() => setShow(!show)}
           >
             {show ? (
-              <EyeOff className="size-[2.4rem] text-[--text-2]" />
+              <EyeOff className="size-[2.4rem] text-[#686868]" />
             ) : (
-              <Eye className="size-[2.4rem] text-[--text-2]" />
+              <Eye className="size-[2.4rem] text-[#686868]" />
             )}
           </button>
         )}
