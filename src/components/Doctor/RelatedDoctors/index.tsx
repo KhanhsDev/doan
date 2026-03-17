@@ -29,7 +29,7 @@ const RelatedDoctors: React.FC<RelatedDoctorsProps> = ({ doctors }) => {
 export default RelatedDoctors;
 const RelatedDoctorCard: React.FC<{ doctor: RelatedDoctor }> = ({ doctor }) => (
   <a
-    href={`/bac-si/${doctor.id}`}
+    href={`/en/doctor/${doctor.id}`}
     className="flex gap-4 p-4 bg-gray-50 rounded-xl hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition"
   >
     <img src={doctor.avatar} alt={doctor.name} className="w-16 h-16 rounded-lg object-cover" />
