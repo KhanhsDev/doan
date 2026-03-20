@@ -1,7 +1,8 @@
-import { MessageCircle, Star } from 'lucide-react';
-import { useKeenSlider } from 'keen-slider/react';
-import 'keen-slider/keen-slider.min.css';
 import { useState } from 'react';
+import { useKeenSlider } from 'keen-slider/react';
+
+import 'keen-slider/keen-slider.min.css';
+import { Star, MessageCircle } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

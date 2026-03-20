@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { usePathname, useRouter } from "@/i18n/routing";
-import { useLocale } from "next-intl";
-import { useTransition } from "react";
+import { useTransition } from 'react';
+
+import { useLocale } from 'next-intl';
+import { useRouter, usePathname } from '@/i18n/routing';
 
 export function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
@@ -19,24 +20,24 @@ export function LanguageSwitcher() {
   return (
     <div className="flex gap-2">
       <button
-        onClick={() => changeLanguage("vi")}
-        disabled={isPending || locale === "vi"}
+        onClick={() => changeLanguage('vi')}
+        disabled={isPending || locale === 'vi'}
         className={`px-3 py-1 rounded transition-colors ${
-          locale === "vi"
-            ? "bg-blue-600 text-white"
-            : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+          locale === 'vi'
+            ? 'bg-blue-600 text-white'
+            : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
         } disabled:opacity-50`}
       >
         VI
       </button>
 
       <button
-        onClick={() => changeLanguage("en")}
-        disabled={isPending || locale === "en"}
+        onClick={() => changeLanguage('en')}
+        disabled={isPending || locale === 'en'}
         className={`px-3 py-1 rounded transition-colors ${
-          locale === "en"
-            ? "bg-blue-600 text-white"
-            : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+          locale === 'en'
+            ? 'bg-blue-600 text-white'
+            : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
         } disabled:opacity-50`}
       >
         EN

@@ -34,6 +34,7 @@ interface DoctorHeroProps {
     subSpecialty?: string;
     availableToday: boolean;
     stats: DoctorStats;
+    experience?: number;
   };
   isBookmarked: boolean;
   onBookmarkToggle: () => void;

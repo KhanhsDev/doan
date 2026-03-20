@@ -98,7 +98,6 @@ const PasswordInput = (props: PasswordInputProps) => {
               {...rest}
               value={rest.value ?? ''}
               type={props.type === 'password' && show ? 'text' : props.type}
-              // placeholder={placeholder}
               className={clsx(
                 inputElementClassName,
                 'absolute !top-[1.2rem] caret-[#000000] text-transparent w-full z-[1]',

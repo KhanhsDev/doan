@@ -70,11 +70,14 @@ const Specialties = () => {
           {specialties.map((specialty, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 text-center hover:shadow-xl transition cursor-pointer group"
+              className="relative bg-white rounded-2xl p-6 text-center shadow-base-1 transition cursor-pointer group"
               onClick={() => {
                 handleDetailSpecialty(specialty.id);
               }}
             >
+              <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-3 py-1 text-xs font-medium text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                Xem chi tiết
+              </span>
               <div
                 className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r ${specialty.color} flex items-center justify-center text-white group-hover:scale-110 transition`}
               >

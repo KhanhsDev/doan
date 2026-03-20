@@ -1,10 +1,9 @@
 import * as dateFns from 'date-fns';
 import { subWeeks, subMonths, startOfYear } from 'date-fns';
 
-import type { TIME_FRAME } from 'interfaces';
+export type TIME_FRAME = '1D' | '1W' | '1M' | '3M' | '6M' | '9M' | 'YTD' | '1Y';
 
-import { DEFAULT_DATE_TIME_FORMAT } from 'global';
-
+const DEFAULT_DATE_TIME_FORMAT = 'HH:mm:ss | dd/MM/yyyy';
 export const transformDateString = (
   stringInput: string,
   formatInput = 'yyyyMMdd',
@@ -18,7 +17,7 @@ export const transformDateString = (
     }
     return stringInput;
   } catch (error) {
-    console.log(error)
+    console.log(error);
 
     return '';
   }
@@ -48,7 +47,7 @@ export const formatDateToString = (date: Date | null | undefined, formatOutput =
     }
     return dateFns.format(date, formatOutput);
   } catch (error) {
-    console.log(error)
+    console.log(error);
 
     return null;
   }
