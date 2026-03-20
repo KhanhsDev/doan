@@ -167,7 +167,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services[activeTab].map((service: any, index: number) => (
+          {services[activeTab as keyof typeof services].map((service: any, index: number) => (
             <div
               key={index}
               className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-blue-600 hover:shadow-xl transition relative flex flex-col"

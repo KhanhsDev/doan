@@ -63,7 +63,7 @@ const LoginForm = () => {
     password: yup.string().label('Mật khẩu').required('Mật khẩu là bắt buộc'),
   });
   return (
-    <div className="bg-[#CCCCCC] p-[4rem] rounded-[0.8rem]">
+    <div className="p-[4rem] rounded-[0.8rem]">
       {/* <Loader
         loading={loading}
         id={componentId.current}
@@ -89,33 +89,29 @@ const LoginForm = () => {
             >
               <div className="flex flex-col gap-[0.8rem]">
                 <TextInput
-                  className="login-input"
                   placeholder="Số điện thoại hoặc email"
                   label="Số điện thoại hoặc email"
                   name="username"
                   value={values.username}
                   labelPlacement="inside"
                   onChange={handleChange}
-                  autoFocus
-                  clearable
                   onClear={() => {
                     setFieldValue('username', '');
                   }}
                   hasError={touched.username && !isBlank(errors.username)}
                   onBlur={handleBlur}
-                  inputClassName="!border-[#ffffff]"
+                  errorMessage={errors.username}
                   inputElementClassName="text-[#484848]"
                 />
                 <PasswordInput
-                  className="login-input"
                   placeholder="Mật khẩu"
-                  inputClassName="!border-[#ffffff]"
                   label="Mật khẩu"
                   type="password"
                   name="password"
                   value={values.password}
                   labelPlacement="inside"
                   onChange={handleChange}
+                  errorMessage={errors.password}
                   hasError={touched.password && !isBlank(errors.password)}
                   onBlur={handleBlur}
                   visibleTextClassName="text-[#484848]"
@@ -124,9 +120,8 @@ const LoginForm = () => {
                   className={clsx(
                     'text-[2rem] text-[var(--text-3)] font-medium leading-[2.4rem] rounded-[0.8rem] border border-[var(--border-10)] py-[1.2rem] text-center w-full mt-[8px]',
                     {
-                      'dark:!bg-[--bg-disabled] light:!bg-[var(--bg-disabled-night)] light:shadow-[1px_2px_8px_0_rgba(3,49,75,0.16)] !text-[--text-disabled]':
-                        !isValid,
-                      'bg-primary-gradient light:bg-[var(--blue)] light:bg-none': isValid,
+                      'bg-[#e6e6e6] shadow-[1px_2px_8px_0_rgba(3,49,75,0.16)] !text-[#8e8e93]': !isValid,
+                      '!bg-gradient-to-r transition-transform from-blue-500 to-cyan-500': isValid,
                     },
                   )}
                   disabled={!isValid}
@@ -135,21 +130,23 @@ const LoginForm = () => {
                 </button>
               </div>
             </form>
-            <div className="w-full flex mt-[1.6rem] flex-row gap-[0.8rem]">
-              <span className="text-[1.6rem] font-500 text-[--text-2] leading-[2rem]">
+            <div className="flex items-center justify-center w-full mt-[1rem]">
+              <div
+                className="text-[1.6rem] font-500 text-[--teal] cursor-pointer leading-[2rem] underline"
+                onClick={() => handleForgotPassword()}
+              >
+                Quên mật khẩu
+              </div>
+            </div>
+            <div className="w-full flex-row gap-[0.8rem] flex justify-between items-center mt-[2rem]">
+              <div className="text-[1.6rem] font-500 text-[--text-2] leading-[2rem]">
                 Bạn chưa có tài khoản?{' '}
-              </span>
+              </div>
               <div
                 className="text-[1.6rem] font-500 text-[--teal] cursor-pointer leading-[2rem] underline"
                 onClick={handleOpenAccount}
               >
                 Mở tài khoản
-              </div>
-              <div
-                className="text-[1.6rem] font-500 text-[--teal] cursor-pointer leading-[2rem] underline ml-auto"
-                onClick={() => handleForgotPassword()}
-              >
-                Quên mật khẩu
               </div>
             </div>
           </>

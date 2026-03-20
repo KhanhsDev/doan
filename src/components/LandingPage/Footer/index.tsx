@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Clock, Stethoscope, Youtube } from 'lucide-react';
+import { Mail, Phone, Clock, MapPin, Youtube, Facebook, Instagram, Stethoscope } from 'lucide-react';
+
 const Footer = () => {
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">

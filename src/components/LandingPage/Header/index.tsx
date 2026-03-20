@@ -9,9 +9,11 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const loginModal = useModalLogin();
   const handleLogin = () => {
-    console.log('show login modal');
     loginModal.handleShow();
   };
+  const facebookUrl = process.env.FACEBOOK_LINK;
+  const youtubeUrl = process.env.YOUTUBE_LINK;
+  const instagramUrl = process.env.INSTAGRAM_LINK;
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md h-fit">
       <div className="max-w-[100rem] mx-auto py-[1.6rem]">
@@ -104,9 +106,25 @@ const Header = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <Facebook className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
-            <Youtube className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
-            <Instagram className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
+            <Facebook
+              className="w-4 h-4 cursor-pointer hover:scale-110 transition"
+              onClick={() => {
+                console.log('check link', facebookUrl);
+                window.open(facebookUrl, '_blank');
+              }}
+            />
+            <Youtube
+              className="w-4 h-4 cursor-pointer hover:scale-110 transition"
+              onClick={() => {
+                window.open(youtubeUrl, '_blank');
+              }}
+            />
+            <Instagram
+              className="w-4 h-4 cursor-pointer hover:scale-110 transition"
+              onClick={() => {
+                window.open(instagramUrl, '_blank');
+              }}
+            />
           </div>
         </div>
       </div>

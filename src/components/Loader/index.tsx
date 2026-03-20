@@ -7,6 +7,8 @@ import { LoadingOverlay } from '@achmadk/react-loading-overlay';
 
 import useSWR from 'swr';
 
+import Preload from '../Preload';
+
 interface LoaderProps {
   className?: string;
   id?: string;
@@ -20,9 +22,10 @@ interface LoaderState {
 }
 
 const Loader: React.FC<LoaderProps> = ({ className, children, loading, id }) => {
-  const { data: loaderState } = useSWR<LoaderState>(COMMON_LOADING, null);
+  const { data: loaderState } = useSWR<LoaderState>(id ? `loader-${id}` : null, null, {
+    refreshInterval: 100,
+  });
   const [innerLoading, setInnerLoading] = useState(false);
-  const { theme } = useTheme();
 
   useEffect(() => {
     if (loaderState && id && loaderState.componentId === id) {
