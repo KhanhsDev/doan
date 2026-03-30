@@ -1,19 +1,26 @@
 import { CheckCircle } from 'lucide-react';
 
+import { useRouter } from 'next/navigation';
+
 const Services = () => {
   // Services
+  const router = useRouter();
+
   const services = [
     {
+      id: 1,
       name: 'Gói khám sức khỏe tổng quát',
       price: '1.500.000đ',
       features: ['Khám lâm sàng', 'Xét nghiệm máu', 'Chụp X-quang'],
     },
     {
+      id: 2,
       name: 'Gói khám thai sản',
       price: '2.000.000đ',
       features: ['Siêu âm thai', 'Xét nghiệm', 'Tư vấn dinh dưỡng'],
     },
     {
+      id: 3,
       name: 'Gói khám nhi',
       price: '800.000đ',
       features: ['Khám tổng quát', 'Tư vấn dinh dưỡng', 'Tiêm chủng'],
@@ -30,8 +37,9 @@ const Services = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
-              key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition"
+              key={service.id}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition cursor-pointer"
+              onClick={() => router.push(`/en/service/${service.id}`)}
             >
               <h3 className="text-[2.4rem] font-bold mb-4 h-[6.4rem] leading-[3.2rem]">{service.name}</h3>
               <div className="text-4xl font-bold mb-6">{service.price}</div>
