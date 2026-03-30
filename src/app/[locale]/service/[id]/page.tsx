@@ -665,7 +665,7 @@ export default function ServiceDetailPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Dịch Vụ Liên Quan</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {service.relatedServices.map(related => (
-                  <a key={related.id} href={`/dich-vu/${related.id}`} className="group">
+                  <a key={related.id} href={`/en/service/${related.id}`} className="group">
                     <div className="relative h-40 rounded-xl overflow-hidden mb-4">
                       <img
                         src={related.image}
@@ -673,7 +673,7 @@ export default function ServiceDetailPage() {
                         className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                       />
                     </div>
-                    <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition">
+                    <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition h-[4.8rem] leading-[2.4rem]">
                       {related.name}
                     </h3>
                     <div className="flex items-center justify-between">
