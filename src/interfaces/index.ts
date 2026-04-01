@@ -1,6 +1,11 @@
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
 
-export * from './model';
-export * from './market';
-export * from './common';
-export * from './response';
-export * from './list-bank';
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: ReactNode;
+  className?: string;
+  size?: 'sx' | 'sm' | 'md' | 'lg';
+  color?: 'success' | 'waring' | 'primary' | 'default' | 'error';
+  variant?: 'border' | 'solid' | 'faded';
+  rounded?: 'sm' | 'md' | 'lg' | 'xl';
+  icon?: ReactNode;
+}
