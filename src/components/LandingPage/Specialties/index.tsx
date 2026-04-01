@@ -2,9 +2,7 @@
 
 import { Eye, Baby, Bone, Brain, Activity, HeartPulse } from 'lucide-react';
 
-import { useParams, useRouter } from 'next/navigation';
-
-import type { RouteParamLng } from '@/interfaces';
+import { useRouter } from 'next/navigation';
 
 const Specialties = () => {
   const specialties = [
@@ -51,7 +49,6 @@ const Specialties = () => {
       color: 'from-teal-500 to-cyan-500',
     },
   ];
-  const { lng } = useParams<RouteParamLng>();
 
   const router = useRouter();
   const handleDetailSpecialty = (id: number) => {
